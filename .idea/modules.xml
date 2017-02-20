@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/smshub.iml" filepath="$PROJECT_DIR$/.idea/modules/smshub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/smshub_main.iml" filepath="$PROJECT_DIR$/.idea/modules/smshub_main.iml" group="smshub" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/smshub_test.iml" filepath="$PROJECT_DIR$/.idea/modules/smshub_test.iml" group="smshub" />
+    </modules>
+  </component>
+</project>
