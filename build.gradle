@@ -1,23 +1,30 @@
-group 'com.ablglobal'
-version '0.1.0'
-
-buildscript {
-    ext.kotlin_version = '1.0.5'
+subprojects {
+    apply plugin: 'kotlin'
 
     repositories {
         mavenCentral()
     }
+
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     }
+
+    ext {
+        kotlin_version = '1.0.5'
+    }
+
+    ext.libs = [
+
+    ]
 }
 
-apply plugin: 'kotlin'
-
-repositories {
-    mavenCentral()
+// apply java plugin to all modules
+configure(allprojects - project(":application")) {
+    group 'com.ablglobal'
+    version '0.1.0'
+    sourceCompatibility = JavaVersion.VERSION_1_8
 }
 
-dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+task wrapper(type: Wrapper) {
+    gradleVersion = "3.1"
 }
